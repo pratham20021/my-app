@@ -37,8 +37,8 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sh '''
-                ssh ec2-user@<EC2-IP> '
-                docker pull your-dockerhub-username/my-app
+                ssh ec2-user@3.111.52.255 '
+                docker pull prathamesh2019/my-app
                 docker stop my-app || true
                 docker rm my-app || true
                 docker run -d -p 8080:8080 --name my-app prathamesh2019/my-app
