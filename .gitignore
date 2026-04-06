@@ -1,26 +1,32 @@
-target/
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
 *.log
-*.class
-*.jar
-*.war
-*.ear
+npm-debug.log*
 
-.idea/
-*.iml
-
-.vscode/
-
+# OS files
 .DS_Store
 Thumbs.db
 
-.env
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.user
 
-node_modules/
-
-build/
-
-.gradle/
-
-out/
-
-*.swp
+# Coverage
+coverage/
