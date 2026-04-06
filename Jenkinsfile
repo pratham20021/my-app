@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "your-dockerhub-username/my-app"
+        DOCKER_IMAGE = "prathamesh2019/my-app"
     }
 
     stages {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/your-username/my-app.git'
+                git 'https://github.com/pratham20021/my-app.git'
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
                 docker pull your-dockerhub-username/my-app
                 docker stop my-app || true
                 docker rm my-app || true
-                docker run -d -p 8080:8080 --name my-app your-dockerhub-username/my-app
+                docker run -d -p 8080:8080 --name my-app prathamesh2019/my-app
                 '
                 '''
             }
